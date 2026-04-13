@@ -27,6 +27,8 @@ export default function RootLayout({
         <nav>
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
+          <Link href="/blog">Blog</Link>
+
         </nav>
         {children}
       </body>
