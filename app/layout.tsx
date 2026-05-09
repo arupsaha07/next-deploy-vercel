@@ -24,13 +24,14 @@ export default function RootLayout({
       className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/blog">Blog</Link>
-
+        <nav className="flex gap-6 bg-gray-200 justify-center py-4">
+          <Link href="/" className="text-xl active:text-red-500 hover:text-red-500 transition-colors px-4">Home</Link>
+          <Link href="/about" className="text-xl active:text-red-500 hover:text-red-500 transition-colors px-4">About</Link>
+          <Link href="/products" className="text-xl active:text-red-500 hover:text-red-500 transition-colors px-4">All Products</Link>
         </nav>
-        {children}
+        <main className="flex w-full max-w-3xl justify-center items-center mx-auto px-4 flex-col bg-zinc-50 font-sans dark:bg-black">
+          {children}
+        </main>
       </body>
     </html>
   );
