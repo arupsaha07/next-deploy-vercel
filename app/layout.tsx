@@ -25,9 +25,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <nav className="flex gap-6 bg-gray-200 justify-center py-4">
-          <Link href="/" className="text-xl active:text-red-500 hover:text-red-500 transition-colors px-4">Home</Link>
-          <Link href="/about" className="text-xl active:text-red-500 hover:text-red-500 transition-colors px-4">About</Link>
-          <Link href="/products" className="text-xl active:text-red-500 hover:text-red-500 transition-colors px-4">All Products</Link>
+          <Link href="/" className="text-xl cursor-pointer hover:text-blue-500 transition-colors px-4">Home</Link>
+          <Link href="/about" className="text-xl cursor-pointer hover:text-blue-500 transition-colors px-4">About</Link>
+          <Link href="/products" className="text-xl cursor-pointer hover:text-blue-500 transition-colors px-4">All Products</Link>
+          <Link href="/signup" className="text-xl ms-auto cursor-pointer hover:text-blue-500 transition-colors px-4">Signup</Link>
         </nav>
         <main className="flex w-full max-w-3xl justify-center items-center mx-auto px-4 flex-col bg-zinc-50 font-sans dark:bg-black">
           {children}
