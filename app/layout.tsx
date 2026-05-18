@@ -23,14 +23,29 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <nav className="flex gap-6 bg-gray-200 justify-center py-4">
-          <Link href="/" className="text-xl cursor-pointer hover:text-blue-500 transition-colors px-4">Home</Link>
-          <Link href="/about" className="text-xl cursor-pointer hover:text-blue-500 transition-colors px-4">About</Link>
-          <Link href="/products" className="text-xl cursor-pointer hover:text-blue-500 transition-colors px-4">All Products</Link>
-          <Link href="/signup" className="text-xl ms-auto cursor-pointer hover:text-blue-500 transition-colors px-4">Signup</Link>
+      <body className="min-h-full flex flex-col bg-gray-50">
+        <nav className="bg-white border-b border-gray-200 shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-16">
+              <div className="flex items-center gap-8">
+                <Link href="/" className="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+                  Shop
+                </Link>
+                <div className="hidden md:flex items-center gap-6">
+                  <Link href="/" className="text-gray-600 hover:text-gray-900 transition-colors">Home</Link>
+                  <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About</Link>
+                  <Link href="/products" className="text-gray-600 hover:text-gray-900 transition-colors">Products</Link>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <Link href="/signup" className="px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                  Sign Up
+                </Link>
+              </div>
+            </div>
+          </div>
         </nav>
-        <main className="flex w-full max-w-3xl justify-center items-center mx-auto px-4 flex-col bg-zinc-50 font-sans dark:bg-black">
+        <main className="flex-1 w-full">
           {children}
         </main>
       </body>
