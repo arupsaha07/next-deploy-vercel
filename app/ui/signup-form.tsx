@@ -68,6 +68,12 @@ export function SignupForm() {
                             )}
                         </div>
 
+                        {state?.message && (
+                            <p className="mt-1.5 text-sm text-green-500">
+                                {state.message}
+                            </p>
+                        )}
+
                         <button
                             disabled={pending}
                             type="submit"
