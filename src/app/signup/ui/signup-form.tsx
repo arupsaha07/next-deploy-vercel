@@ -1,6 +1,7 @@
 "use client"
 
-import { signup } from "../auth/auth";
+import { signup } from "@/src/app/signup/auth/auth";
+import Link from "next/link";
 import { useActionState } from "react";
 
 export function SignupForm() {
@@ -22,6 +23,7 @@ export function SignupForm() {
                             <input
                                 id="name"
                                 name="name"
+                                type="text"
                                 placeholder="John Doe"
                                 className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-all duration-200"
                             />
@@ -69,7 +71,7 @@ export function SignupForm() {
                         </div>
 
                         {state?.message && (
-                            <p className="mt-1.5 text-sm text-green-500">
+                            <p className="mt-1.5 text-sm text-gray-500">
                                 {state.message}
                             </p>
                         )}
@@ -85,9 +87,9 @@ export function SignupForm() {
 
                     <p className="mt-6 text-center text-sm text-gray-500">
                         Already have an account?{" "}
-                        <a href="/login" className="text-blue-600 hover:text-blue-700 font-medium">
+                        <Link href="/login" className="text-blue-600 hover:text-blue-700 font-medium">
                             Sign in
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 'use server'
-import { FormState, SignupFormSchema } from "@/app/signup/definitions"
-import { supabaseAdmin } from "@/lib/supabase/server"
+
+import { FormState, SignupFormSchema } from "@/src/app/signup/definitions"
+import { createClient } from "@/src/lib/supabase/server"
 
 export async function signup(state: FormState, formData: FormData) {
     const validatedFields = SignupFormSchema.safeParse({
@@ -16,21 +17,10 @@ export async function signup(state: FormState, formData: FormData) {
     }
 
     const { name, email, password } = validatedFields.data
+    const supabase = await createClient()
 
-    // const { data: existingUser } = await supabaseAdmin
-    //     .from('users')
-    //     .select('id')
-    //     .eq('email', email)
-    //     .maybeSingle()
-
-    // if (existingUser) {
-    //     return {
-    //         errors: { email: ['Email already exists'] },
-    //     }
-    // }
-
-
-    const { error } = await supabaseAdmin.auth.signUp({
+    // Register user securely (not as admin)
+    const { error } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -40,10 +30,9 @@ export async function signup(state: FormState, formData: FormData) {
         },
     })
 
-
     if (error) {
         return { message: error.message }
     }
 
-    return { message: 'User created successfully' }
+    return { message: 'Signup successful! Please check your email to verify your account.' }
 }
