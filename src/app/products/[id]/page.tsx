@@ -1,4 +1,4 @@
-import getProductById from "@/lib/getProductById";
+import getProductById from "@/src/lib/getProductById";
 import Image from "next/image";
 
 export default async function Product({ params }: { params: Promise<{ id: number }> }) {
