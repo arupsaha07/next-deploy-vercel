@@ -2,7 +2,6 @@
 
 import { login } from "@/src/app/login/auth/auth"
 import { useActionState } from "react"
-import { FormState } from "@/src/app/login/definitions"
 
 export function LoginForm() {
 
