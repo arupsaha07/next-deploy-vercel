@@ -15,10 +15,10 @@ export async function middleware(request: NextRequest) {
           return request.cookies.getAll()
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) => request.cookies.set(name, value))
-          supabaseResponse = NextResponse.next({
-            request,
-          })
+          // cookiesToSet.forEach(({ name, value, options }) => request.cookies.set(name, value))
+          // supabaseResponse = NextResponse.next({
+          //   request,
+          // })
           cookiesToSet.forEach(({ name, value, options }) =>
             supabaseResponse.cookies.set(name, value, options)
           )
@@ -27,8 +27,34 @@ export async function middleware(request: NextRequest) {
     }
   )
 
+  const {data: {user}} = await supabase.auth.getUser()
+  const pathname = request.nextUrl.pathname
+  
+  const protectedRoutes = ['/dashboard']
+
+  const isProtectedRoute = protectedRoutes.some((route) => pathname.startsWith(route))
+
+  // Redirect unauthenticated users
+  if (isProtectedRoute && !user) {
+    return NextResponse.redirect(new URL('/login', request.url))
+  }
+
+  // Redirect logged in users away from auth pages
+  if (
+    user &&
+    (pathname.startsWith('/login') ||
+      pathname.startsWith('/signup'))
+  ) {
+    return NextResponse.redirect(new URL('/dashboard', request.url))
+  }
+
+  
   // This will refresh the session if expired
   await supabase.auth.getUser()
+
+
+
+  
 
   return supabaseResponse
 }
