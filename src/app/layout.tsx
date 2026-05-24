@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Navbar from "@/src/components/Navbar";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -28,27 +29,12 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
 
-              <Link
-                href="/"
-                className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
-              >
-                Arup.
+              <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+                Arup,s Portfolio
               </Link>
 
               <div className="flex items-center gap-4">
-                <Link
-                  href="/login"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Login
-                </Link>
-
-                <Link
-                  href="/signup"
-                  className="px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Sign Up
-                </Link>
+                <Navbar/>
               </div>
 
             </div>
