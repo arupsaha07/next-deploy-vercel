@@ -1,5 +1,6 @@
 "use server"
 
+import { redirect } from "next/navigation"
 import { LoginFormSchema, FormState } from "../definitions"
 import { createClient } from "@/src/lib/supabase/server"
 
@@ -33,4 +34,6 @@ export async function login(state: FormState, formData: FormData) {
     return {
         message: "Login successful",
     }
+
+    redirect("/dashboard")
 }
