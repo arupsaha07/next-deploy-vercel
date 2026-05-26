@@ -31,9 +31,5 @@ export async function login(state: FormState, formData: FormData) {
         }
     }
 
-    return {
-        message: "Login successful",
-    }
-
     redirect("/dashboard")
 }

@@ -16,7 +16,7 @@ export function LoginForm() {
                         <p className="text-gray-500 mt-2">Enter your details to get started</p>
                     </div>
 
-                    <form action={action}>
+                    <form action={action} className="space-y-5">
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
                             <input

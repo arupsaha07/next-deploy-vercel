@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
-import Link from "next/link";
+
+import Navbar from "@/src/components/Navbar";
 
 const inter = Inter({
-  variable: "--font-geist-sans",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Arup Saha | Full Stack Developer",
-  description: "Portfolio website built with Next.js",
+  title: "Arup Saha | Frontend Engineer",
+  description:
+    "Modern interactive portfolio built with Next.js, React, Tailwind CSS, and TypeScript.",
 };
 
 export default function RootLayout({
@@ -21,41 +24,62 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${inter.variable} dark scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-gray-50 text-gray-900">
-        <nav className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
+      <body
+        className="
+          min-h-screen
+          transition-colors
+          duration-300
+        "
+      >
+        {/* BACKGROUND EFFECTS */}
+        <div className="fixed inset-0 z-0 overflow-hidden">
+          {/* Gradient Orb 1 */}
+          <div
+            className="
+              absolute
+              left-[-10rem]
+              top-[-10rem]
+              h-[25rem]
+              w-[25rem]
+              rounded-full
+              bg-purple-500/20
+              blur-3xl
+            "
+          />
 
-              <Link
-                href="/"
-                className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors"
-              >
-                Arup.
-              </Link>
+          {/* Gradient Orb 2 */}
+          <div
+            className="
+              absolute
+              right-[-10rem]
+              top-[10rem]
+              h-[30rem]
+              w-[30rem]
+              rounded-full
+              bg-cyan-500/20
+              blur-3xl
+            "
+          />
 
-              <div className="flex items-center gap-4">
-                <Link
-                  href="/login"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Login
-                </Link>
+          {/* Grid Overlay */}
+          <div
+            className="
+              absolute
+              inset-0
+              bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]
+              bg-[size:4rem_4rem]
+            "
+          />
+        </div>
 
-                <Link
-                  href="/signup"
-                  className="px-4 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Sign Up
-                </Link>
-              </div>
+        {/* NAVBAR */}
+        <Navbar />
 
-            </div>
-          </div>
-        </nav>
-
-        <main className="flex-1 w-full">
+        {/* PAGE CONTENT */}
+        <main className="relative flex-1">
           {children}
         </main>
       </body>
