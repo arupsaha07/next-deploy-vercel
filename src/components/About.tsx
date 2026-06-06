@@ -2,7 +2,7 @@
 
 export default function About() {
   return (
-    <section className="relative py-32">
+    <section id="about" className="relative py-32">
       <div className="container-custom">
         
         {/* SECTION HEADER */}

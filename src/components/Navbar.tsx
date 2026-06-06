@@ -25,35 +25,7 @@ export default async function Navbar() {
             href="/"
             className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
           >
-            Home
-          </Link>
-
-          <Link
-            href="/about"
-            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
-          >
-            About
-          </Link>
-
-          <Link
-            href="/projects"
-            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
-          >
-            Projects
-          </Link>
-
-          <Link
-            href="/services"
-            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
-          >
-            Services
-          </Link>
-
-          <Link
-            href="/contact"
-            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
-          >
-            Contact
+            Portfolio
           </Link>
         </nav>
 
