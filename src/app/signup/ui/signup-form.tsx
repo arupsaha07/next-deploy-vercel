@@ -7,17 +7,17 @@ import { useActionState } from "react";
 export function SignupForm() {
     const [state, action, pending] = useActionState(signup, undefined);
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+        <div className="min-h-screen flex items-center justify-center bg-background px-4">
             <div className="w-full max-w-md">
-                <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+                <div className="bg-card rounded-2xl shadow-xl border border-border p-8">
                     <div className="text-center mb-8">
-                        <h1 className="text-2xl font-bold text-gray-900">Create Account</h1>
-                        <p className="text-gray-500 mt-2">Enter your details to get started</p>
+                        <h1 className="text-2xl font-bold text-foreground">Create Account</h1>
+                        <p className="text-muted-foreground mt-2">Enter your details to get started</p>
                     </div>
 
                     <form action={action} className="space-y-5">
                         <div>
-                            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
+                            <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">
                                 Full Name
                             </label>
                             <input
@@ -25,17 +25,17 @@ export function SignupForm() {
                                 name="name"
                                 type="text"
                                 placeholder="John Doe"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-all duration-200"
+                                className="w-full px-4 py-3 rounded-lg border border-border bg-input text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200"
                             />
                             {state?.errors?.name && (
-                                <p className="mt-1.5 text-sm text-red-500">
+                                <p className="mt-1.5 text-sm text-error">
                                     {state.errors.name}
                                 </p>
                             )}
                         </div>
 
                         <div>
-                            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1.5">
+                            <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">
                                 Email Address
                             </label>
                             <input
@@ -43,17 +43,17 @@ export function SignupForm() {
                                 name="email"
                                 type="email"
                                 placeholder="you@example.com"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-all duration-200"
+                                className="w-full px-4 py-3 rounded-lg border border-border bg-input text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200"
                             />
                             {state?.errors?.email && (
-                                <p className="mt-1.5 text-sm text-red-500">
+                                <p className="mt-1.5 text-sm text-error">
                                     {state.errors.email}
                                 </p>
                             )}
                         </div>
 
                         <div>
-                            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1.5">
+                            <label htmlFor="password" className="block text-sm font-medium text-foreground mb-1.5">
                                 Password
                             </label>
                             <input
@@ -61,17 +61,17 @@ export function SignupForm() {
                                 name="password"
                                 type="password"
                                 placeholder="••••••••"
-                                className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent focus:bg-white transition-all duration-200"
+                                className="w-full px-4 py-3 rounded-lg border border-border bg-input text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200"
                             />
                             {state?.errors?.password && (
-                                <p className="mt-1.5 text-sm text-red-500">
+                                <p className="mt-1.5 text-sm text-error">
                                     {state.errors.password}
                                 </p>
                             )}
                         </div>
 
                         {state?.message && (
-                            <p className="mt-1.5 text-sm text-gray-500">
+                            <p className="mt-1.5 text-sm text-muted-foreground">
                                 {state.message}
                             </p>
                         )}
@@ -79,15 +79,15 @@ export function SignupForm() {
                         <button
                             disabled={pending}
                             type="submit"
-                            className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="w-full py-3 px-4 gradient-bg text-primary-foreground font-medium rounded-lg transition-all duration-200 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                             {pending ? "Creating account..." : "Sign Up"}
                         </button>
                     </form>
 
-                    <p className="mt-6 text-center text-sm text-gray-500">
+                    <p className="mt-6 text-center text-sm text-muted-foreground">
                         Already have an account?{" "}
-                        <Link href="/login" className="text-blue-600 hover:text-blue-700 font-medium">
+                        <Link href="/login" className="text-primary hover:opacity-80 font-medium">
                             Sign in
                         </Link>
                     </p>

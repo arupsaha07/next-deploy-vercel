@@ -10,21 +10,21 @@ export default function Services() {
       className="relative overflow-hidden px-6 py-24 md:px-12"
     >
       {/* Background Glow */}
-      <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-secondary/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
         <div className="mb-16 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300 backdrop-blur">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-secondary/20 bg-secondary/10 px-4 py-1 text-sm text-secondary backdrop-blur">
             <Sparkles className="h-4 w-4" />
             Services
           </div>
 
-          <h2 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl">
+          <h2 className="mb-6 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
             Building AI-Powered Digital Experiences
           </h2>
 
-          <p className="mx-auto max-w-2xl text-lg leading-8 text-white/70">
+          <p className="mx-auto max-w-2xl text-lg leading-8 text-muted-foreground">
             I design and develop scalable platforms, automation systems,
             intelligent workflows, and premium user experiences for modern
             businesses.
@@ -45,15 +45,15 @@ export default function Services() {
                   overflow-hidden
                   rounded-3xl
                   border
-                  border-white/10
-                  bg-white/5
+                  border-border
+                  bg-card
                   p-8
                   backdrop-blur-xl
                   transition-all
                   duration-500
                   hover:-translate-y-2
-                  hover:border-cyan-400/30
-                  hover:bg-white/10
+                  hover:border-secondary/30
+                  hover:bg-muted
                 "
               >
                 {/* Hover Glow */}
@@ -62,9 +62,9 @@ export default function Services() {
                     absolute
                     inset-0
                     bg-gradient-to-br
-                    from-cyan-400/0
-                    via-cyan-400/0
-                    to-cyan-400/10
+                    from-secondary/0
+                    via-secondary/0
+                    to-secondary/10
                     opacity-0
                     transition-opacity
                     duration-500
@@ -84,9 +84,9 @@ export default function Services() {
                     justify-center
                     rounded-2xl
                     border
-                    border-cyan-400/20
-                    bg-cyan-400/10
-                    text-cyan-300
+                    border-secondary/20
+                    bg-secondary/10
+                    text-secondary
                   "
                 >
                   <Icon className="h-7 w-7" />
@@ -94,11 +94,11 @@ export default function Services() {
 
                 {/* Content */}
                 <div className="relative">
-                  <h3 className="mb-4 text-2xl font-semibold text-white">
+                  <h3 className="mb-4 text-2xl font-semibold text-foreground">
                     {service.title}
                   </h3>
 
-                  <p className="mb-6 leading-7 text-white/70">
+                  <p className="mb-6 leading-7 text-muted-foreground">
                     {service.description}
                   </p>
 
@@ -110,12 +110,12 @@ export default function Services() {
                         className="
                           rounded-full
                           border
-                          border-white/10
-                          bg-white/5
+                          border-border
+                          bg-muted
                           px-3
                           py-1
                           text-xs
-                          text-white/70
+                          text-muted-foreground
                         "
                       >
                         {tag}
@@ -132,7 +132,7 @@ export default function Services() {
                     left-0
                     h-[2px]
                     w-0
-                    bg-cyan-400
+                    bg-secondary
                     transition-all
                     duration-500
                     group-hover:w-full

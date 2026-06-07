@@ -14,12 +14,12 @@ export default function About() {
               items-center
               rounded-full
               border
-              border-white/10
-              bg-white/5
+              border-border
+              bg-card
               px-4
               py-2
               text-sm
-              text-slate-300
+              text-muted-foreground
               backdrop-blur-md
             "
           >
@@ -32,7 +32,7 @@ export default function About() {
               font-black
               leading-tight
               tracking-tight
-              text-white
+              text-foreground
               sm:text-5xl
             "
           >
@@ -53,22 +53,22 @@ export default function About() {
               lg:p-10
             "
           >
-            <h3 className="text-2xl font-bold text-white">
+            <h3 className="text-2xl font-bold text-foreground">
               Frontend Engineer with Product Thinking
             </h3>
 
-            <div className="mt-6 space-y-6 text-slate-400 leading-8">
+            <div className="mt-6 space-y-6 text-muted-foreground leading-8">
               
               <p>
                 I'm Arup Saha, a frontend developer with over
-                <span className="text-white font-semibold"> 9+ years </span>
+                <span className="text-foreground font-semibold"> 9+ years </span>
                 of experience building responsive, scalable, and user-focused
                 applications for modern web platforms.
               </p>
 
               <p>
                 My core expertise lies in
-                <span className="text-white font-semibold">
+                <span className="text-foreground font-semibold">
                   {" "}React.js, Next.js, JavaScript, TypeScript,
                   Tailwind CSS, and frontend architecture.
                 </span>
@@ -83,7 +83,7 @@ export default function About() {
 
               <p>
                 Currently, I'm expanding into
-                <span className="text-white font-semibold">
+                <span className="text-foreground font-semibold">
                   {" "}AI workflows, automation systems, Node.js,
                   and modern full-stack development
                 </span>
@@ -105,15 +105,15 @@ export default function About() {
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <p className="text-sm text-slate-400">
+                  <p className="text-sm text-muted-foreground">
                     Experience
                   </p>
 
-                  <h3 className="mt-2 text-5xl font-black text-white">
+                  <h3 className="mt-2 text-5xl font-black text-foreground">
                     9+
                   </h3>
 
-                  <p className="mt-2 text-slate-400">
+                  <p className="mt-2 text-muted-foreground">
                     Years building modern frontend applications
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function About() {
                 p-8
               "
             >
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-muted-foreground">
                 Core Stack
               </p>
 
@@ -160,19 +160,19 @@ export default function About() {
                     className="
                       rounded-full
                       border
-                      border-white/10
-                      bg-white/5
+                      border-border
+                      bg-card
                       px-4
                       py-2
                       text-sm
                       font-medium
-                      text-slate-300
+                      text-muted-foreground
                       backdrop-blur-md
                       transition-all
                       duration-300
-                      hover:border-purple-500/30
-                      hover:bg-purple-500/10
-                      hover:text-white
+                      hover:border-primary/30
+                      hover:bg-primary/10
+                      hover:text-foreground
                     "
                   >
                     {skill}
@@ -204,15 +204,15 @@ export default function About() {
                 "
               />
 
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-muted-foreground">
                 Current Focus
               </p>
 
-              <h3 className="mt-3 text-2xl font-bold text-white">
+              <h3 className="mt-3 text-2xl font-bold text-foreground">
                 Interactive UI + AI Powered Experiences
               </h3>
 
-              <p className="mt-4 leading-7 text-slate-400">
+              <p className="mt-4 leading-7 text-muted-foreground">
                 Exploring the intersection of frontend engineering,
                 AI automation, modern UI systems, and scalable
                 product experiences using Next.js and intelligent workflows.

@@ -1,0 +1,24 @@
+export default function LearningsSection({
+    learnings,
+}: {
+    learnings: string[];
+}) {
+    return (
+        <section className="mb-20">
+            <h2 className="mb-8 text-3xl font-bold text-foreground">
+                Learnings
+            </h2>
+
+            <div className="space-y-4">
+                {learnings.map((item) => (
+                    <div
+                        key={item}
+                        className="rounded-3xl border border-border bg-card p-6 text-muted-foreground"
+                    >
+                        {item}
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+}

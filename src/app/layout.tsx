@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/src/components/Navbar";
+import ThemeScript from "@/src/components/ThemeScript";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,16 +25,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} dark scroll-smooth`}
+      className={`${inter.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <body
-        className="
-          min-h-screen
-          transition-colors
-          duration-300
-        "
-      >
+      <head>
+        <ThemeScript />
+      </head>
+      <body className="min-h-screen transition-colors duration-300">
         {/* BACKGROUND EFFECTS */}
         <div className="fixed inset-0 z-0 overflow-hidden">
           {/* Gradient Orb 1 */}
@@ -45,8 +43,8 @@ export default function RootLayout({
               h-[25rem]
               w-[25rem]
               rounded-full
-              bg-purple-500/20
               blur-3xl
+              bg-[var(--orb-primary)]
             "
           />
 
@@ -59,8 +57,8 @@ export default function RootLayout({
               h-[30rem]
               w-[30rem]
               rounded-full
-              bg-cyan-500/20
               blur-3xl
+              bg-[var(--orb-secondary)]
             "
           />
 
@@ -69,7 +67,7 @@ export default function RootLayout({
             className="
               absolute
               inset-0
-              bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]
+              bg-[linear-gradient(var(--grid-line)_1px,transparent_1px),linear-gradient(90deg,var(--grid-line)_1px,transparent_1px)]
               bg-[size:4rem_4rem]
             "
           />
@@ -79,9 +77,7 @@ export default function RootLayout({
         <Navbar />
 
         {/* PAGE CONTENT */}
-        <main className="relative flex-1">
-          {children}
-        </main>
+        <main className="relative flex-1">{children}</main>
       </body>
     </html>
   );

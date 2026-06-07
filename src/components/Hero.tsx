@@ -19,12 +19,12 @@ export default function Hero() {
                 items-center
                 rounded-full
                 border
-                border-white/10
-                bg-white/5
+                border-border
+                bg-card
                 px-4
                 py-2
                 text-sm
-                text-slate-300
+                text-muted-foreground
                 backdrop-blur-md
               "
             >
@@ -38,7 +38,7 @@ export default function Hero() {
                 font-black
                 leading-tight
                 tracking-tight
-                text-white
+                text-foreground
                 sm:text-6xl
                 lg:text-7xl
               "
@@ -56,7 +56,7 @@ export default function Hero() {
                 max-w-2xl
                 text-lg
                 leading-8
-                text-slate-400
+                text-muted-foreground
               "
             >
               I'm Arup Saha — a frontend engineer with 9+ years of
@@ -77,11 +77,7 @@ export default function Hero() {
                   py-4
                   text-sm
                   font-semibold
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:shadow-2xl
+                  text-primary-foreground
                 "
               >
                 View Projects
@@ -92,17 +88,17 @@ export default function Hero() {
                 className="
                   rounded-full
                   border
-                  border-white/10
-                  bg-white/5
+                  border-border
+                  bg-card
                   px-8
                   py-4
                   text-sm
                   font-semibold
-                  text-white
+                  text-foreground
                   backdrop-blur-md
                   transition-all
                   duration-300
-                  hover:bg-white/10
+                  hover:bg-muted
                 "
               >
                 Hire Me
@@ -113,22 +109,22 @@ export default function Hero() {
             <div className="mt-14 flex flex-wrap gap-10">
               
               <div>
-                <h3 className="text-3xl font-bold text-white">9+</h3>
-                <p className="mt-1 text-sm text-slate-400">
+                <h3 className="text-3xl font-bold text-foreground">9+</h3>
+                <p className="mt-1 text-sm text-muted-foreground">
                   Years Experience
                 </p>
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-white">50+</h3>
-                <p className="mt-1 text-sm text-slate-400">
+                <h3 className="text-3xl font-bold text-foreground">50+</h3>
+                <p className="mt-1 text-sm text-muted-foreground">
                   Projects Built
                 </p>
               </div>
 
               <div>
-                <h3 className="text-3xl font-bold text-white">React</h3>
-                <p className="mt-1 text-sm text-slate-400">
+                <h3 className="text-3xl font-bold text-foreground">React</h3>
+                <p className="mt-1 text-sm text-muted-foreground">
                   Specialized Stack
                 </p>
               </div>
@@ -148,7 +144,7 @@ export default function Hero() {
               "
             >
               {/* TOP BAR */}
-              <div className="flex items-center gap-2 border-b border-white/10 pb-4">
+              <div className="flex items-center gap-2 border-b border-border pb-4">
                 <div className="h-3 w-3 rounded-full bg-red-400" />
                 <div className="h-3 w-3 rounded-full bg-yellow-400" />
                 <div className="h-3 w-3 rounded-full bg-green-400" />
@@ -161,15 +157,15 @@ export default function Hero() {
                   const developer = {"{"}
                 </div>
 
-                <div className="pl-6 text-slate-300">
+                <div className="pl-6 text-muted-foreground">
                   name: <span className="text-cyan-400">"Arup Saha"</span>,
                 </div>
 
-                <div className="pl-6 text-slate-300">
+                <div className="pl-6 text-muted-foreground">
                   role: <span className="text-cyan-400">"Frontend Engineer"</span>,
                 </div>
 
-                <div className="pl-6 text-slate-300">
+                <div className="pl-6 text-muted-foreground">
                   stack: [
                   <span className="text-cyan-400">
                     "React", "Next.js", "TypeScript"
@@ -177,7 +173,7 @@ export default function Hero() {
                   ],
                 </div>
 
-                <div className="pl-6 text-slate-300">
+                <div className="pl-6 text-muted-foreground">
                   experience:
                   <span className="text-cyan-400"> "9+ Years"</span>,
                 </div>
@@ -212,11 +208,11 @@ export default function Hero() {
                 lg:block
               "
             >
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-muted-foreground">
                 UI Engineering
               </p>
 
-              <h4 className="mt-1 text-lg font-semibold text-white">
+              <h4 className="mt-1 text-lg font-semibold text-foreground">
                 Modern Design Systems
               </h4>
             </div>
@@ -233,11 +229,11 @@ export default function Hero() {
                 lg:block
               "
             >
-              <p className="text-sm text-slate-400">
+              <p className="text-sm text-muted-foreground">
                 Current Focus
               </p>
 
-              <h4 className="mt-1 text-lg font-semibold text-white">
+              <h4 className="mt-1 text-lg font-semibold text-foreground">
                 Next.js + AI Workflows
               </h4>
             </div>

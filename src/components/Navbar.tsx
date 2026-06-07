@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { createClient } from "@/src/lib/supabase/server";
+import ThemeToggle from "@/src/components/ThemeToggle";
 
 export default async function Navbar() {
   const supabase = await createClient();
@@ -9,12 +10,12 @@ export default async function Navbar() {
   } = await supabase.auth.getUser();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-black/20 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="container-custom flex h-20 items-center justify-between">
         {/* LEFT */}
         <Link
           href="/"
-          className="text-2xl font-bold tracking-tight text-white"
+          className="text-2xl font-bold tracking-tight text-foreground"
         >
           arup<span className="gradient-text">.</span>
         </Link>
@@ -22,20 +23,22 @@ export default async function Navbar() {
         {/* CENTER NAV */}
         <nav className="hidden items-center gap-8 md:flex">
           <Link
-            href="/"
-            className="text-sm font-medium text-slate-300 transition-colors hover:text-white"
+            href="/work"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Portfolio
+            Work
           </Link>
         </nav>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+
           {!user ? (
             <>
               <Link
                 href="/login"
-                className="hidden text-sm font-medium text-slate-300 transition-colors hover:text-white md:block"
+                className="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground md:block"
               >
                 Login
               </Link>
@@ -45,19 +48,19 @@ export default async function Navbar() {
                 className="
                   rounded-full
                   border
-                  border-white/10
-                  bg-white/10
+                  border-border
+                  bg-card
                   px-5
                   py-2.5
                   text-sm
                   font-semibold
-                  text-white
+                  text-foreground
                   backdrop-blur-md
                   transition-all
                   duration-300
                   hover:-translate-y-0.5
-                  hover:border-white/20
-                  hover:bg-white/20
+                  hover:border-primary/30
+                  hover:bg-muted
                 "
               >
                 Hire Me
@@ -65,7 +68,7 @@ export default async function Navbar() {
             </>
           ) : (
             <div className="flex items-center gap-4">
-              <div className="hidden text-sm text-slate-300 md:block">
+              <div className="hidden text-sm text-muted-foreground md:block">
                 Welcome back
               </div>
 
@@ -75,16 +78,16 @@ export default async function Navbar() {
                   className="
                     rounded-full
                     border
-                    border-red-500/20
-                    bg-red-500/10
+                    border-error/20
+                    bg-error/10
                     px-5
                     py-2.5
                     text-sm
                     font-medium
-                    text-red-400
+                    text-error
                     transition-all
                     duration-300
-                    hover:bg-red-500/20
+                    hover:bg-error/20
                   "
                 >
                   Logout
