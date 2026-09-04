@@ -1,223 +1,102 @@
 "use client";
 
+const WORKFLOW_STEPS = [
+  {
+    step: "01",
+    label: "Understand",
+    desc: "Grasp the business problem and user pain points before writing a single line of code.",
+  },
+  {
+    step: "02",
+    label: "Observe",
+    desc: "Study existing processes, user behaviour, and data flows in their natural context.",
+  },
+  {
+    step: "03",
+    label: "Map Workflow",
+    desc: "Document every step, decision point, and handoff in the current process.",
+  },
+  {
+    step: "04",
+    label: "Find Bottlenecks",
+    desc: "Pinpoint friction, repetition, and automation opportunities hiding in plain sight.",
+  },
+  {
+    step: "05",
+    label: "Design AI Workflow",
+    desc: "Architect intelligent pipelines that replace bottlenecks with autonomous systems.",
+  },
+  {
+    step: "06",
+    label: "Build",
+    desc: "Develop with React, Next.js, Node.js, and AI APIs — clean, typed, tested.",
+  },
+  {
+    step: "07",
+    label: "Deploy",
+    desc: "Ship via CI/CD with zero-downtime releases and real-time observability.",
+  },
+  {
+    step: "08",
+    label: "Improve",
+    desc: "Measure, iterate, and compound gains. Every deploy starts the next cycle.",
+  },
+];
+
 export default function About() {
   return (
-    <section id="about" className="relative py-32">
+    <section id="about" className="border-b border-[#e5e5e5] py-24 lg:py-32">
       <div className="container-custom">
-        
-        {/* SECTION HEADER */}
-        <div className="mb-16 max-w-3xl">
-          <div
-            className="
-              mb-4
-              inline-flex
-              items-center
-              rounded-full
-              border
-              border-border
-              bg-card
-              px-4
-              py-2
-              text-sm
-              text-muted-foreground
-              backdrop-blur-md
-            "
-          >
-            ✦ About Me
-          </div>
 
-          <h2
-            className="
-              text-4xl
-              font-black
-              leading-tight
-              tracking-tight
-              text-foreground
-              sm:text-5xl
-            "
-          >
-            Building scalable frontend systems
-            with modern web technologies.
+        {/* Header */}
+        <div className="mb-16 max-w-2xl">
+          <p className="eyebrow mb-4">Process</p>
+          <h2 className="text-4xl font-bold tracking-tight text-[#111111] lg:text-5xl">
+            How I build — from first meeting to final deploy.
           </h2>
+          <p className="mt-5 text-lg text-[#71717a]">
+            Eight steps. No skipped stages. Every engagement starts here.
+          </p>
         </div>
 
-        {/* MAIN GRID */}
-        <div className="grid gap-8 lg:grid-cols-2">
-          
-          {/* LEFT CONTENT */}
-          <div
-            className="
-              glass-card
-              hover-lift
-              p-8
-              lg:p-10
-            "
-          >
-            <h3 className="text-2xl font-bold text-foreground">
-              Frontend Engineer with Product Thinking
-            </h3>
-
-            <div className="mt-6 space-y-6 text-muted-foreground leading-8">
-              
-              <p>
-                I'm Arup Saha, a frontend developer with over
-                <span className="text-foreground font-semibold"> 9+ years </span>
-                of experience building responsive, scalable, and user-focused
-                applications for modern web platforms.
-              </p>
-
-              <p>
-                My core expertise lies in
-                <span className="text-foreground font-semibold">
-                  {" "}React.js, Next.js, JavaScript, TypeScript,
-                  Tailwind CSS, and frontend architecture.
-                </span>
-              </p>
-
-              <p>
-                Over the years, I have worked on enterprise-level dashboards,
-                customer portals, banking and finance applications, support
-                systems, and interactive UI platforms while collaborating
-                closely with agile teams.
-              </p>
-
-              <p>
-                Currently, I'm expanding into
-                <span className="text-foreground font-semibold">
-                  {" "}AI workflows, automation systems, Node.js,
-                  and modern full-stack development
-                </span>
-                to build next-generation digital experiences.
-              </p>
-            </div>
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="space-y-8">
-            
-            {/* EXPERIENCE CARD */}
-            <div
-              className="
-                glass-card
-                hover-lift
-                p-8
-              "
-            >
-              <div className="flex items-start justify-between">
-                <div>
-                  <p className="text-sm text-muted-foreground">
-                    Experience
-                  </p>
-
-                  <h3 className="mt-2 text-5xl font-black text-foreground">
-                    9+
-                  </h3>
-
-                  <p className="mt-2 text-muted-foreground">
-                    Years building modern frontend applications
-                  </p>
-                </div>
-
-                <div
-                  className="
-                    rounded-2xl
-                    bg-purple-500/10
-                    p-4
-                    text-3xl
-                  "
-                >
-                  🚀
-                </div>
-              </div>
-            </div>
-
-            {/* SKILLS CARD */}
-            <div
-              className="
-                glass-card
-                hover-lift
-                p-8
-              "
-            >
-              <p className="text-sm text-muted-foreground">
-                Core Stack
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                
-                {[
-                  "React.js",
-                  "Next.js",
-                  "TypeScript",
-                  "JavaScript",
-                  "Tailwind CSS",
-                  "Node.js",
-                  "AI Workflows",
-                  "Responsive UI",
-                ].map((skill) => (
-                  <div
-                    key={skill}
-                    className="
-                      rounded-full
-                      border
-                      border-border
-                      bg-card
-                      px-4
-                      py-2
-                      text-sm
-                      font-medium
-                      text-muted-foreground
-                      backdrop-blur-md
-                      transition-all
-                      duration-300
-                      hover:border-primary/30
-                      hover:bg-primary/10
-                      hover:text-foreground
-                    "
-                  >
-                    {skill}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* JOURNEY CARD */}
-            <div
-              className="
-                glass-card
-                hover-lift
-                relative
-                overflow-hidden
-                p-8
-              "
-            >
+        {/* Hairline-grid pipeline */}
+        <div className="overflow-hidden rounded-xl border border-[#e5e5e5]">
+          <div className="grid grid-cols-1 gap-px bg-[#e5e5e5] sm:grid-cols-2 lg:grid-cols-4">
+            {WORKFLOW_STEPS.map((item) => (
               <div
-                className="
-                  absolute
-                  right-0
-                  top-0
-                  h-32
-                  w-32
-                  rounded-full
-                  bg-cyan-500/10
-                  blur-3xl
-                "
-              />
+                key={item.step}
+                className="group bg-white p-6 transition-colors duration-150 hover:bg-[#f8f8f8]"
+              >
+                {/* Step number */}
+                <span className="font-mono text-xs font-semibold tabular-nums text-[#5c47f5]">
+                  {item.step}
+                </span>
 
-              <p className="text-sm text-muted-foreground">
-                Current Focus
-              </p>
+                {/* Label */}
+                <h3 className="mt-3 text-base font-semibold text-[#111111]">
+                  {item.label}
+                </h3>
 
-              <h3 className="mt-3 text-2xl font-bold text-foreground">
-                Interactive UI + AI Powered Experiences
-              </h3>
+                {/* Description */}
+                <p className="mt-2 text-sm leading-6 text-[#71717a]">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-              <p className="mt-4 leading-7 text-muted-foreground">
-                Exploring the intersection of frontend engineering,
-                AI automation, modern UI systems, and scalable
-                product experiences using Next.js and intelligent workflows.
-              </p>
-            </div>
+        {/* Bottom meta row */}
+        <div className="mt-8 flex flex-wrap items-center gap-6">
+          <p className="text-sm text-[#71717a]">
+            Used across every client engagement since 2019.
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {["AI Automation", "Frontend Engineering", "Workflow Design"].map(
+              (t) => (
+                <span key={t} className="tag">{t}</span>
+              )
+            )}
           </div>
         </div>
       </div>

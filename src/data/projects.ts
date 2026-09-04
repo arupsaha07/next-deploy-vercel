@@ -1,4 +1,3 @@
-import { Database, FileText, KeyRound, RefreshCw, ShieldCheck, Smartphone } from "lucide-react";
 
 export const projects = [
     {
@@ -8,12 +7,14 @@ export const projects = [
         title: "Brahmos",
         subtitle: "Jio Loan Application Webview",
         category: "Banking & Finance",
-        shortDescription:
+        description:
             "Mobile-first personal loan onboarding experience embedded inside the Jio native app.",
+
+        heroImage: "/images/work/jio-brahmos-webview/jio_logo.svg",
 
         // Detail page
         overview:
-            "A mobile-first webview app embedded inside a Jio native app that guides users through a personal loan application journey. It handles the full flow from identity validation → mobile OTP → personal details → loan amount selection → work details → loan agreement → document upload. The app is launched by the native shell with a signed key, exchanges it for an auth token, and progresses the user through a linear multi-stage loan onboarding process.",
+            "Built a mobile-first loan application experience embedded within a native fintech application. The journey guides users through identity verification, authentication, personal details, employment information, agreement acceptance, and document upload using a secure, step-by-step onboarding flow.",
 
         domain: "Banking & Finance",
         client: "Jio Financial Services",
@@ -38,76 +39,25 @@ export const projects = [
         ],
 
         features: [
-            "Identity validation",
-            "OTP verification",
-            "Personal details collection",
-            "Loan amount selection",
-            "Employment information",
-            "Agreement acceptance",
-            "Document upload flow",
+            "Secure user authentication with OTP verification",
+            "Multi-step loan application journey",
+            "Real-time form validation and progress tracking",
+            "Employment and income information capture",
+            "Digital agreement acceptance",
+            "Document upload with guided workflow",
+            "Responsive mobile-first experience"
         ],
-
-        architecture: {
-            authenticationFlow: [
-                {
-                    icon: Smartphone,
-                    title: "Native App",
-                    description: "Launches secure WebView",
-                },
-                {
-                    icon: KeyRound,
-                    title: "Signed Key",
-                    description: "Passed from host application",
-                },
-                {
-                    icon: ShieldCheck,
-                    title: "Auth Token",
-                    description: "Creates authenticated session",
-                },
-            ],
-
-            applicationFlow: [
-                {
-                    icon: FileText,
-                    title: "Loan Journey",
-                    description: "Linear multi-step onboarding",
-                },
-                {
-                    icon: Database,
-                    title: "Zustand Persist",
-                    description: "Stores progress locally",
-                },
-                {
-                    icon: RefreshCw,
-                    title: "TanStack Query",
-                    description: "Handles API communication",
-                },
-            ],
-        },
-
-        metrics: [
-            "Multi-stage onboarding flow",
-            "Automatic token refresh",
-            "State persistence with Zustand",
-            "English + Hindi support",
-        ],
-
         challenges: [
-            "Maintaining session continuity inside WebView",
-            "Handling token expiry gracefully",
-            "Managing large multi-step forms",
+            "Delivering a smooth onboarding experience inside a mobile WebView",
+            "HManaging complex multi-step forms while preserving user progress",
+            "Ensuring reliable authentication and session continuity",
+            "Building reusable and maintainable form components",
         ],
-
-        solutions: [
-            "Axios interceptor for token refresh",
-            "Zustand persistence for progress retention",
-            "React Hook Form + Zod validation",
-        ],
-
         learnings: [
-            "Building resilient onboarding journeys",
-            "Separating client and server state",
-            "Creating reusable form patterns",
+            "Designing scalable multi-step workflows",
+            "Building resilient authentication flows",
+            "Improving form usability and accessibility",
+            "Collaborating within a large enterprise development team"
         ],
         showcase: [
             {
@@ -141,12 +91,6 @@ export const projects = [
                 image: "/images/work/jio-brahmos-webview/img-5.webp",
             },
             {
-                title: "Agreement Acceptance",
-                description:
-                    "Users review terms and digitally accept the loan agreement before moving to document upload.",
-                image: "/images/work/jio-brahmos-webview/img-6.webp",
-            },
-            {
                 title: "Document Upload",
                 description:
                     "Required KYC and supporting documents are uploaded with guided steps and status tracking.",
@@ -154,4 +98,123 @@ export const projects = [
             },
         ]
     },
+    {
+        slug: "hero-hamrahi",
+
+        title: "Hero Hamrahi",
+
+        subtitle: "Mobile Customer Application Design",
+
+        category: "Product Design",
+
+        description:
+            "Designed a modern mobile application for Hero Hamrahi focused on delivering an intuitive customer experience with streamlined navigation and task-oriented workflows.",
+
+        heroImage: "/images/work/hero-hamrahi/hero.webp",
+
+        overview:
+            "Created high-fidelity mobile UI designs in Figma for the Hero Hamrahi application. The design emphasized usability, visual consistency, and a simplified customer journey while following modern mobile design principles.",
+
+        domain: "Automotive",
+
+        client: "Hero MotoCorp",
+
+        logo: "/images/work/hero-hamrahi/logo.svg",
+
+        tools: [
+            "Figma",
+            "Design System",
+            "Auto Layout",
+            "Components",
+            "Prototyping"
+        ],
+
+        contributions: [
+            "Designed end-to-end mobile user flows",
+            "Created reusable UI components",
+            "Built a scalable design system",
+            "Designed responsive mobile layouts",
+            "Created interactive prototypes",
+            "Collaborated with product and engineering teams"
+        ],
+
+        highlights: [
+            "Modern visual language",
+            "Reusable component library",
+            "Accessible layouts",
+            "Consistent spacing and typography",
+            "Mobile-first experience"
+        ],
+
+        gallery: [
+            {
+                title: "Dashboard",
+                description: "Customer home experience.",
+                image: "/images/work/hero-hamrahi/dashboard.webp"
+            },
+            {
+                title: "Service Booking",
+                description: "Simple booking workflow.",
+                image: "/images/work/hero-hamrahi/service.webp"
+            },
+            {
+                title: "Profile",
+                description: "Account management interface.",
+                image: "/images/work/hero-hamrahi/profile.webp"
+            }
+        ]
+    },
+    {
+        slug: "hero-housing-finance-connector",
+
+        title: "Hero Housing Finance",
+
+        subtitle: "Connector App Design",
+
+        category: "Product Design",
+
+        description:
+            "Designed the mobile experience for field connectors to simplify customer onboarding and loan processing.",
+
+        overview:
+            "Focused on creating efficient task-based workflows for field executives. The application was designed to minimize friction during customer onboarding and document collection.",
+
+        domain: "Financial Services",
+
+        client: "Hero Housing Finance",
+
+        tools: [
+            "Figma",
+            "Auto Layout",
+            "Components",
+            "Interactive Prototype"
+        ],
+
+        contributions: [
+            "Mobile workflow design",
+            "Loan onboarding screens",
+            "Form experience",
+            "Document upload flow",
+            "Component library"
+        ],
+
+        gallery: [
+            {
+                title: "Dashboard",
+                description: "Customer home experience.",
+                image: "/images/work/hero-housing-finance-connector/dashboard.webp"
+            },
+            
+            {
+                title: "Service Booking",
+                description: "Simple booking workflow.",
+                image: "/images/work/hero-housing-finance-connector/service.webp"
+            },
+            {
+                title: "Profile",
+                description: "Account management interface.",
+                image: "/images/work/hero-housing-finance-connector/profile.webp"
+            }
+        ]
+    }
 ];

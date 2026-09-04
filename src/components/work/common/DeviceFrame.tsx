@@ -12,19 +12,19 @@ export default function DeviceFrame({ image, alt }: DeviceFrameProps) {
       {/* Side buttons */}
       <div
         aria-hidden
-        className="absolute -left-[3px] top-[88px] h-7 w-[3px] rounded-l-sm bg-zinc-400 dark:bg-zinc-600"
+        className="absolute left-[-3px] top-[88px] h-7 w-[3px] rounded-l-sm bg-zinc-400 dark:bg-zinc-600"
       />
       <div
         aria-hidden
-        className="absolute -left-[3px] top-[128px] h-12 w-[3px] rounded-l-sm bg-zinc-400 dark:bg-zinc-600"
+        className="absolute left-[-3px] top-[128px] h-12 w-[3px] rounded-l-sm bg-zinc-400 dark:bg-zinc-600"
       />
       <div
         aria-hidden
-        className="absolute -left-[3px] top-[172px] h-12 w-[3px] rounded-l-sm bg-zinc-400 dark:bg-zinc-600"
+        className="absolute left-[-3px] top-[172px] h-12 w-[3px] rounded-l-sm bg-zinc-400 dark:bg-zinc-600"
       />
       <div
         aria-hidden
-        className="absolute -right-[3px] top-[148px] h-16 w-[3px] rounded-r-sm bg-zinc-400 dark:bg-zinc-600"
+        className="absolute right[-3px] top-[148px] h-16 w-[3px] rounded-r-sm bg-zinc-400 dark:bg-zinc-600"
       />
 
       {/* Titanium-style chassis */}

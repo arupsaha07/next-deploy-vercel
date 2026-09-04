@@ -9,32 +9,30 @@ import {
   
   export const skills = [
     {
-      title: "Frontend",
+      title: "Business Workflow Automation",
       icon: Globe,
       items: [
-        "React.js",
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "HTML5",
-        "CSS3",
+        "Admissions",
+        "Approvals",
+        "Finance",
+        "HR",
+        "Operations",
       ],
     },
     {
-      title: "Styling",
+      title: "AI Assistants",
       icon: Layers3,
       items: [
-        "Tailwind CSS",
-        "SCSS",
-        "Bootstrap",
-        "Responsive Design",
-        "UI Systems",
+        "Internal AI",
+        "Customer AI",
+        "Knowledge AI",
+        "Voice AI",
       ],
     },
     {
-      title: "Backend",
+      title: "Workflow Platforms",
       icon: Server,
-      items: ["Node.js", "Express.js", "REST APIs", "Authentication"],
+      items: ["n8n", "Integrations", "Approvals", "Notifications", "Automation"],
     },
     {
       title: "Tools",
